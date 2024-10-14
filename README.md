@@ -3,3 +3,5 @@
 hello world !!
 
 これは Fork したリポジトリです！
+
+git config を変更することを忘れていました。
