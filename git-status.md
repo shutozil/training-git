@@ -40,3 +40,25 @@ Your branch is ahead of 'origin/training/commands' by 1 commit.
 
 nothing to commit, working tree clean
 ```
+
+---
+
+`git stash`で変更を一時退避した後、作業に戻りコミットまで完了したので、stash を削除する。
+
+```
+% git stash list
+stash@{0}: On training/commands: in-review
+stash@{1}: WIP on training/commands: 6de8da2 add git-status.md
+%
+%
+% git stash drop stash@{0}
+Dropped stash@{0} (2b6886e00b6bdd950dfd1338441c7e337ccdb9be)
+% git stash list
+stash@{0}: WIP on training/commands: 6de8da2 add git-status.md
+%
+%
+% git stash drop stash@{0}
+Dropped stash@{0} (d0cd8dc820c7e366b06989227b90ee15cecdfbcb)
+% git stash list
+%
+```
